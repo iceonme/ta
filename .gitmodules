@@ -1,0 +1,9 @@
+[submodule "TradingAgentArena"]
+	path = TradingAgentArena
+	url = ./TradingAgentArena
+[submodule "TradingAgentSquad"]
+	path = TradingAgentSquad
+	url = ./TradingAgentSquad
+[submodule "TradingSkills"]
+	path = TradingSkills
+	url = ./TradingSkills

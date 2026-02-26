@@ -1,0 +1,37 @@
+# 3-Project 架构初始化与 TAA 引擎抽取计划
+
+本项目旨在将原有的单体量化脚本重构为三个解耦的独立项目：
+1. **TAA (Arena)**: 竞技场平台（撮合、数据、比赛）
+2. **TAS (Squad)**: 交易助手小队（MAS 协作、PA 指挥）
+3. **TS (Skills)**: 策略工具箱（MCP 标准 Skill）
+
+## 待办事项与设计决策
+
+> [!IMPORTANT]
+> - 所有的三个项目都必须严格遵守 VibeCoding 协作文档协议。
+> - `TAA` 作为基建，逻辑必须与 `TAS` 和 `TS` 彻底解耦。
+
+## 提议的变更
+
+### 1. [NEW] TradingAgentArena (TAA)
+- **核心逻辑迁移**：从 `C:\projects\CTS1` 抽取 `BacktestEngine` 和 `CSVDataFeed`。
+- **接口标准化**：初步定义 `TradeArenaSkill` 的输入输出协议（文档化）。
+- **入口点**：创建 `main.py` 用于启动独立的竞技场服务或回测流。
+
+### 2. [NEW] TradingSkills (TS)
+- **策略抽取**：将 `CTS1/strategies/grid_rsi.py` 迁移入此项目。
+- **Skill 封装**：创建一个初始的符合 MCP/Anthropic 协议的封装层，使大模型可以直接调用该策略。
+
+### 3. [NEW] TradingAgentSquad (TAS)
+- **小队底座**：参考 `can` 项目，初步初始化小队角色的配置文件。
+- **握手协议**：编写一个简单的客户端 Skill，用于连接 TAA 竞技场。
+
+## 验证计划
+
+### 自动化测试
+- 运行针对 TAA 的引擎单元测试，确保从 CTS1 迁移出的撮合逻辑依然准确。
+- `python -m pytest TradingAgentArena/tests/`
+
+### 手动验证
+- 启动 TAA 模拟一条历史数据流，观察是否有成功的成交记录产生。
+- 手动查看 3 个项目的 `BOARD.md` 状态是否联动。
