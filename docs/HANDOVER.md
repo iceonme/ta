@@ -21,9 +21,13 @@
 
 ## 🚀 接下来要做什么 (Next Steps)
 
-1. **TAA (Arena)**: 迁移 `CTS1` 的回测引擎代码，使其成为独立的服务模块。
-2. **TS (Skills)**: 定义 MCP 协议接口，将 Grid RSI 策略封装为第一个标准化 Skill。
-3. **TAS (Squad)**: 建立小队通信框架，实现与 TAA 的初步数据握手。
+1. **[TAA] 引擎迁移** (当前最高优先级):
+   - 从 `C:\projects\CTS1\engines\backtest.py` 抽取核心撮合逻辑。
+   - 在 `TradingAgentArena` 下建立独立的引擎模块，解耦对 Grid RSI 策略的依赖。
+2. **[TS] Skill 协议原型**:
+   - 定义标准的 JSON 请求/响应格式，使 TS 能够作为 AI 的工具被调用。
+3. **[TAS] 小队握手**:
+   - 建立一个小型的 PA 助手，尝试连接启动后的 TAA。
 
 ---
 
