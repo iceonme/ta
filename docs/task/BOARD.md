@@ -19,7 +19,8 @@
 
 - [x] **[META] 架构三层解耦与目录搭建**：已完成。
 - [x] **[META] Git Submodule 全局版本控制**：已完成。
-- [/] **[META] 建立全局记忆系统 (Global Handover)**：正在编写并固化讨论成果。
+- [x] **[META] 建立全局记忆系统 (Global Handover)**：已完成。
+- [x] **[META] 细化概念架构与读写流标准 (INS-002)**：已完成。
 
 ---
 
