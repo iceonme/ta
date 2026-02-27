@@ -37,7 +37,7 @@ graph TD
 ### 1.3 TS (Trading Skills) - 策略武器库
 - **角色**：作为“技能工具箱”。
 - **职责**：
-  - 标准化封装：遵循 MCP (Model Context Protocol) 或 Anthropic Skills 标准。
+  - 标准化封装：遵循 Anthropic Skills 标准。
   - 策略逻辑：将具体的算法（如 Grid RSI, MACD, 情感分析）封装为无状态的工具。
   - 市场化潜力：未来可作为独立的 Skill Market 模块，供不同的小队订阅。
 
@@ -64,5 +64,5 @@ C:\projects\ta\ (Meta-repo)
 ## 4. 后续演进
 
 - [ ] 实现 TAA 的第一套标准化回测接口。
-- [ ] 完成 Grid RSI 的首个符合 MCP 标准的 Skill 封装。
+- [ ] 完成 Grid RSI 的首个符合 Anthropic Skills 标准的 Skill 封装。
 - [ ] 实现 TAS 与 TAA 的跨项目握手。

@@ -9,7 +9,7 @@
 ## 🏗️ TODO (待办事项)
 
 - [ ] **[TAA] 核心引擎迁移**：从 CTS1 剥离回测逻辑并集成入 Arena 项目。
-- [ ] **[TS] Grid RSI Skill 化**：完成第一个符合 MCP 标准的策略技能。
+- [ ] **[TS] Grid RSI Skill 化**：完成第一个符合 Anthropic Skills 标准的策略技能。
 - [ ] **[TAS] 小队基础框架**：初始化多智能体通信总线及 PA 助手底座。
 - [ ] **[CORE] 跨项目握手接口定义**：确定 Arena API 与 Agent 接入的标准协议。
 
