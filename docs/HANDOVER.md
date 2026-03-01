@@ -16,6 +16,7 @@
 - [x] **基础设施支撑**：已完成 `C:\projects\ta` 的物理结构搭建。
 - [x] **Git 环境初始化**：主仓库与三个子模块仓库已建立并关联。
 - [x] **文档同步**：VISION, ROADMAP, BOARD 等模板已分发至各子项目并完成了个性化愿景描述。
+- [x] **[TS] 架构终极解耦 (2026-03-01)**：首战告捷！基于 `ADR-002`，成功将网格策略剥离为纯函数卡带 (`Strategy Skill`)，并将 OKX 的行情获取和交易下发剥离为独立的 (`Data Feed Skill`) 和 (`Execution Skill`)。并写出了能串联这三大件的 `live_runner_demo.py` 原型。
 
 ---
 
@@ -23,11 +24,9 @@
 
 1. **[TAA] 引擎迁移** (当前最高优先级):
    - 从 `C:\projects\CTS1\engines\backtest.py` 抽取核心撮合逻辑。
-   - 在 `TradingAgentArena` 下建立独立的引擎模块，解耦对 Grid RSI 策略的依赖。
-2. **[TS] Skill 协议原型**:
-   - 定义标准的 JSON 请求/响应格式，使 TS 能够作为 AI 的工具被调用。
-3. **[TAS] 小队握手**:
-   - 建立一个小型的 PA 助手，尝试连接启动后的 TAA。
+   - 在 `TradingAgentArena` 下建立独立的引擎模块，且由于 TS 的解耦已完成，TAA 现在的定位就是那个最大的“游戏机 (Runner)”。它要负责加载所有的 TS 卡带。
+2. **[TAS] 小队握手**:
+   - 建立一个小型的 PA 助手，尝试连接启动后的 TAA 及使用现成的 TS 工具包。
 
 ---
 
